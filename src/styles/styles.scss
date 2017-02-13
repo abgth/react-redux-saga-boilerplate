@@ -1,0 +1,278 @@
+@import "variables";
+@import "react-date-picker";
+
+#content{
+	padding:0px;
+}
+body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+.padding-0{
+	padding:0;
+}
+.padding-left-0{
+    padding-left:0px;
+}
+.padding-right-0{
+    padding-right:0px;
+}
+.pointer-hand{
+    cursor:pointer;
+}
+.form-control,.btn{
+	border-radius:0px;
+}
+.form-control:focus,.react-date-field__input:focus {
+    border-color: $hdr-skyblue;
+    border-color: $light-blue-bg;
+    outline: 0;
+    -moz-box-shadow: 0px 0px transparent;
+    -ms-box-shadow: 0px 0px transparent;
+    -webkit-box-shadow: 0px 0px transparent;
+    box-shadow: 0px 0px transparent;
+}
+.text-justify{
+    text-align:justify;
+}
+.modal-close-btn{
+    margin-top:20px;
+    position:absolute;
+    right:15px;
+    i.fa{
+        float:right;
+        font-size:32px;
+        font-weight:bold;
+        cursor:pointer;
+        margin-top:-40px;
+        margin-right:20px;
+    }
+}
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+
+
+/* Form Styling */
+button.btn{
+    &:focus,&:active{
+        outline:none;
+    }
+}
+    @media (min-width: 1600px){
+        .container {
+            //width: 1500px;
+        }
+    }
+
+.vdo-Form{
+    font-family:$OpenSans;
+
+    .form-control,.react-date-field__input{
+        border-radius:3px;
+        background-color:#fff;
+        box-shadow:0px 0px transparent;
+        &:focus,&:active,&:hover{
+            border:1px solid #ccc;
+        }
+    }
+    input.form-control,input.react-date-field__input{
+        padding:14px 25px;
+        height:52px;
+        &:focus,&:active,&:hover{
+            border:1px solid #ccc;
+        }
+    }
+    select.form-control{
+        padding:10px 25px;
+        height:53px;
+        &:focus,&:active,&:hover{
+            border:1px solid #ccc;
+        }
+
+    }
+    .radio-btn{
+        font-family: $OpenSans;
+        color:  #333333;
+        font-size: 13px;
+        ::selection { background: transparent; }
+        ::-moz-selection { background: transparent; }
+        padding-left:25px;
+        cursor:pointer;
+        margin-left:10px;
+        display:block-inline;
+        input[type="radio"]{
+            display:block;
+            height:0;
+            width:0;
+            visibility: hidden;
+            & + label:before{
+                content:" ";
+                position:absolute;
+                height:16px;
+                width:16px;
+                cursor:pointer;
+                border-radius:100%;
+                border:1px solid #224e8b;
+                margin-left:-20px;
+                background-color:#fff;
+                display:block;
+            }
+            &:checked + label:before{
+                background-color:#224e8b;
+                color:#fff;
+                padding:2px;
+                font-size:9px;
+                display:block;
+                vertical-align: middle;
+            }
+            &:checked + label:after{
+                content:" ";
+                position:absolute;
+                height:12px;
+                width:12px;
+                margin-left:-18px;
+                margin-top:-18px;
+                display:block;
+                cursor:pointer;
+                border-radius:100%;
+                border:2px solid #fff;
+                background-color:#224e8b;
+                color:#fff;
+                padding:0px;
+                font-size:9px;
+                vertical-align: middle;
+            }
+        }
+        label{
+            cursor:pointer;
+            font-family: $OpenSans;
+            color:  #333333;
+            font-size: 14px;
+            padding-left:20px;
+            margin-top:5px;
+        }
+    }
+    .check{
+        ::selection { background: transparent; }
+        ::-moz-selection { background: transparent; }
+        input[type="checkbox"]{
+            display:block;
+            height:0;
+            width:0;
+            visibility: hidden;
+            & + label:before{
+                content:" ";
+                position:absolute;
+                height:15px;
+                width:15px;
+                cursor:pointer;
+                border:1px solid #224e8b;
+                margin-left:-20px;
+                border-radius: 3px;
+                background-color:#fff;
+                display:block;
+            }
+            &:checked + label:before{
+                font-family: FontAwesome;
+                content:"\f00c";
+                background-color:#224e8b;
+//content:" ";
+//background: #224e8b url("/images/checked.svg")no-repeat center;
+//background-size:cover;
+                color:#fff;
+                padding:1px 2px;
+                font-size:9px;
+                vertical-align: middle;
+                display:block;
+            }
+        }
+        label{
+            cursor:pointer;
+            font-family: $OpenSans;
+            color:  #333333;
+            font-size: 14px;
+            padding-left:20px;
+            margin-top:5px;
+        }
+    }
+}
+.page-loader-img{
+    position:fixed;
+    z-index:3334;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow:hidden;
+    top:0;
+    padding-top:25%;
+    background-color:rgba(255,255,255,.4);
+    text-align:center;
+    i.fa{
+        float:none;
+        margin:0px auto;
+    }
+}
+.page-loader-img-doc{
+    position: absolute;
+    z-index: 5554;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    top: 0;
+    height:100%;
+    width:100%;
+    color:$blue-bg;
+    padding-top: 5%;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+@media screen and (max-width:767px){
+    .vdo-Form.vdo-Form-sm input.form-control{
+        padding:8px;
+        height:36px;
+        font-size:12px;
+    }
+    .vdo-Form.vdo-Form-sm input.form-control{
+
+    }
+}
+.btn-default:active:hover,.btn-default:active:active,.btn-default:active:focus, .open > .dropdown-toggle.btn-default:focus{
+    background-color: #fefefe;
+    border-color: #ccc;
+}
+a, a:focus, a:active{
+    outline:none;
+}
+#google-signin-btn-op,#google-signup-btn-op{
+      display: inline-block;
+      background: url(/assets/images/google-plus.png)no-repeat;
+      background-size: contain;
+      color: #444;
+      width: 190px;
+      height: 32px;
+      border-radius: 0px;
+      border: 0;
+}
+@media only screen and (min-width : 768px) and (max-width : 1000px) {
+    .sm-align-center{
+        text-align:center;
+    }
+
+}@media only screen and (max-width : 767px) {
+    .xs-align-center{
+        text-align:center;
+    }
+    .padding-left-0{
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .padding-right-0{
+        padding-right:15px;
+        padding-left:15px;
+    }
+    .padding-0{
+        padding:0px;
+    }
+}
